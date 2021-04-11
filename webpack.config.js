@@ -1,22 +1,19 @@
 var path = require('path');
-
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const base = require('./webpack.config.base.js')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
+    ...base,
   mode: 'development',
-  entry: './src/index.js',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[index].[contenthash].js', //生产的文件名
+  devtool:'inline-source-map',
+  devServer: {
+    contentBase: './dist',
   },
-  plugins: [new HtmlWebpackPlugin({
-      title : '写代码了', //html的title
-     template:'src/assets/index.html' //模版
-  })],
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        use: ["style-loader", "css-loader"], //开发环境用loader，不用生产文件，速度快
       },
     ],
   },
