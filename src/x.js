@@ -1,3 +1,5 @@
-import css from  './x.css'
-console.log(CSS)
+//import   './x.less'
+import   './z.styl'
+//import   './y.scss'
+
 export default 'xxx'

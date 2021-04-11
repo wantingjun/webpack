@@ -10,3 +10,9 @@
 * loader是加载器。plugin是插件
 * loader： 用来加载一个文件。比如css-loader， babel-loader
 * plugin：用来加强扩展功能。比如
+10. yarn add sass-loader dart-sass
+11. yarn add less-loader --devnpm install -D sass-loader@7.x
+12. less语法
+13. stylus语法(less scss stylus的区别)
+14. webpack引入图片:file-loader:把文件变为文件路径
+15. 使用懒加载：用import（）加载一个文件，会得到一个promise。promise前面是成功，后面失败是什么
